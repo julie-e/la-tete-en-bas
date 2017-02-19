@@ -1,0 +1,203 @@
+<h1 class="index-title text-center" id="top-articles">Nos articles</h1>
+<h3 class="index-paragraphe text-center">Des photos, des souvenirs, des blagues... et bien d'autres choses encore (selon notre inspiration du jour)</h3>
+
+<div class="text-center">
+  <ul class="list-inline">
+    <li><%= link_to "Colombie", "#colombie", class: "btn btn-country" %></li>
+    <li><%= link_to "Pérou", "#perou", class: "btn btn-country" %></li>
+    <li><%= link_to "Bolivie", "#bolivie", class: "btn btn-country" %></li>
+    <li><%= link_to "Chili", "#chili", class: "btn btn-country" %></li>
+    <li><%= link_to "Argentine", "#argentine", class: "btn btn-country" %></li>
+    <li><%= link_to "Nouvelle-Zélande", "#nouvelle-zelande", class: "btn btn-country" %></li>
+    <li><%= link_to "Polynésie", "#polynesie", class: "btn btn-country" %></li>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="country-wraper text-center" id="colombie">
+      <div class="col-xs-12">
+      <h2 class="index-sous-title">COLOMBIE</h2>
+      <%= image_tag "Colombia.png", class: "image-country" %>
+      </div>
+      <% if @articles.where(country: "Colombie").count == 0 %>
+        <p class="index-paragraphe text-center">Nous n'y sommes pas encore... Mais on a hate nous aussi !!</p>
+      <% else %>
+          <ul>
+          <%= @articles.where(country: "Colombie").each do |article| %>
+            <li>
+              <%= article.title %>
+              <%= article.content %>
+            </li>
+          <% end %>
+          </ul>
+      <% end %>
+      <div class="text-center">
+        <%= link_to "Back to top", "#top-articles", class: "btn btn-primary back-button" %>
+        <%= link_to "Back to home", "/", class: "btn btn-primary back-button" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="country-wraper text-center" id="perou">
+      <div class="col-xs-12">
+      <h2 class="index-sous-title">PEROU</h2>
+      <%= image_tag "Perou.png", class: "image-country" %>
+      </div>
+      <% if @articles.where(country: "Pérou").count == 0 %>
+        <p class="index-paragraphe text-center">Nous n'y sommes pas encore... Mais on a hate nous aussi !!</p>
+      <% else %>
+          <ul>
+          <%= @articles.where(country: "Pérou").each do |article| %>
+            <li>
+              <%= article.title %>
+              <%= article.content %>
+            </li>
+          <% end %>
+          </ul>
+      <% end %>
+      <div class="text-center">
+        <%= link_to "Back to top", "#top-articles", class: "btn btn-primary back-button" %>
+        <%= link_to "Back to home", "/", class: "btn btn-primary back-button" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="country-wraper text-center" id="bolivie">
+      <div class="col-xs-12">
+      <h2 class="index-sous-title">BOLIVIE</h2>
+      <%= image_tag "Bolivie.png", class: "image-country" %>
+      </div>
+      <% if @articles.where(country: "Bolivie").count == 0 %>
+        <p class="index-paragraphe text-center">Nous n'y sommes pas encore... Mais on a hate nous aussi !!</p>
+      <% else %>
+          <ul>
+          <%= @articles.where(country: "Bolivie").each do |article| %>
+            <li>
+              <%= article.title %>
+              <%= article.content %>
+            </li>
+          <% end %>
+          </ul>
+      <% end %>
+      <div class="text-center">
+        <%= link_to "Back to top", "#top-articles", class: "btn btn-primary back-button" %>
+        <%= link_to "Back to home", "/", class: "btn btn-primary back-button" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="country-wraper text-center" id="chili">
+      <div class="col-xs-12">
+      <h2 class="index-sous-title">CHILI</h2>
+      <%= image_tag "Chili.png", class: "image-country" %>
+      </div>
+      <% if @articles.where(country: "Chili").count == 0 %>
+        <p class="index-paragraphe text-center">Nous n'y sommes pas encore... Mais on a hate nous aussi !!</p>
+      <% else %>
+          <ul>
+          <%= @articles.where(country: "Chili").each do |article| %>
+            <li>
+              <%= article.title %>
+              <%= article.content %>
+            </li>
+          <% end %>
+          </ul>
+      <% end %>
+      <div class="text-center">
+        <%= link_to "Back to top", "#top-articles", class: "btn btn-primary back-button" %>
+        <%= link_to "Back to home", "/", class: "btn btn-primary back-button" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="country-wraper text-center" id="argentine">
+      <div class="col-xs-12">
+      <h2 class="index-sous-title">ARGENTINE</h2>
+      <%= image_tag "argentina.png" , class: "image-country" %>
+      </div>
+      <% if @articles.where(country: "Argentine").count == 0 %>
+        <p class="index-paragraphe text-center">Nous n'y sommes pas encore... Mais on a hate nous aussi !!</p>
+      <% else %>
+          <ul>
+          <%= @articles.where(country: "Argentine").each do |article| %>
+            <li>
+              <%= article.title %>
+              <%= article.content %>
+            </li>
+          <% end %>
+          </ul>
+      <% end %>
+      <div class="text-center">
+        <%= link_to "Back to top", "#top-articles", class: "btn btn-primary back-button" %>
+        <%= link_to "Back to home", "/", class: "btn btn-primary back-button" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="country-wraper text-center" id="nouvelle-zelande">
+      <div class="col-xs-12">
+      <h2 class="index-sous-title">NOUVELLE ZELANDE</h2>
+      <%= image_tag "new-zealand.png" , class: "image-country" %>
+      </div>
+      <% if @articles.where(country: "Nouvelle Zélande").count == 0 %>
+        <p class="index-paragraphe text-center">Nous n'y sommes pas encore... Mais on a hate nous aussi !!</p>
+      <% else %>
+          <ul>
+          <%= @articles.where(country: "Nouvelle Zélande").each do |article| %>
+            <li>
+              <%= article.title %>
+              <%= article.content %>
+            </li>
+          <% end %>
+          </ul>
+      <% end %>
+      <div class="text-center">
+        <%= link_to "Back to top", "#top-articles", class: "btn btn-primary back-button" %>
+        <%= link_to "Back to home", "/", class: "btn btn-primary back-button" %>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="country-wraper text-center" id="polynesie">
+      <div class="col-xs-12">
+      <h2 class="index-sous-title">POLYNESIE</h2>
+      <%= image_tag "polynesie.png", class: "image-country" %>
+      </div>
+      <% if @articles.where(country: "Polynésie").count == 0 %>
+        <p class="index-paragraphe text-center">Nous n'y sommes pas encore... Mais on a hate nous aussi !!</p>
+      <% else %>
+          <ul>
+          <%= @articles.where(country: "Polynésie").each do |article| %>
+            <li>
+              <%= article.title %>
+              <%= article.content %>
+            </li>
+          <% end %>
+          </ul>
+      <% end %>
+      <div class="text-center">
+        <%= link_to "Back to top", "#top-articles", class: "btn btn-primary back-button" %>
+        <%= link_to "Back to home", "/", class: "btn btn-primary back-button" %>
+      </div>
+    </div>
+  </div>
+</div>
